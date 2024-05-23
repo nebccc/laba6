@@ -2,13 +2,15 @@
 #include <vector>
 #include <iomanip> // для setw
 
+using namespace std;
+
 int main() {
     int N;
-    std::cout << "Введите размерность матрицы (N): ";
-    std::cin >> N;
+    cout << "Введите размерность матрицы (N): ";
+    cin >> N;
 
     // Инициализация матрицы
-    std::vector<std::vector<int>> matrix(N, std::vector<int>(N));
+    vector<vector<int>> matrix(N, vector<int>(N));
 
     // Заполнение матрицы
     for (int i = 0; i < N; ++i) {
@@ -31,12 +33,12 @@ int main() {
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
             if (matrix[i][j] == 0) {
-                std::cout << "000 ";
+                cout << "000 ";
             } else {
-                std::cout << std::setw(3) << matrix[i][j] << " ";
+                cout << setw(3) << matrix[i][j] << " ";
             }
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     return 0;
